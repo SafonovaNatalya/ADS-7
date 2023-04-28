@@ -10,28 +10,28 @@ struct SYM {
 
 template<typename T>
 class TPQueue {
-  private:
-  std::list <T> spisok;
-  bool helper;
-  T element;
+ private:
+ std::list <T> spisok;
+ bool helper;
+ T element;
 
  public:
   bool isEmpty() const {
   return spisok.empty();
   }
   void push(const T& value) {
-  if (isEmpty()){
+  if (isEmpty()) {
     spisok.push_back(value);
   } else {
     helper = false;
-    for (auto i = spisok.begin(); i != spisok.end(); i++){
-      if ((* i).prior < value.prior){
+    for (auto i = spisok.begin(); i != spisok.end(); i++) {
+      if ((* i).prior < value.prior) {
         spisok.insert(i, value);
         helper = true;
         break;
       }
     }
-    if (!helper){
+    if (!helper) {
       spisok.push_back(value);
     }
   }
