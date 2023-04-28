@@ -19,9 +19,6 @@ class TPQueue {
   bool isEmpty() const {
   return spisok.empty();
   }
-  ~TPQueue() {
-  delete spisok;
-  }
   void push(const T& value) {
   if (isEmpty()){
     spisok.push_back(value);
