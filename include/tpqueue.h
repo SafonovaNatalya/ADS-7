@@ -11,9 +11,9 @@ struct SYM {
 template<typename T>
 class TPQueue {
  private:
- std::list <T> spisok;
- bool helper;
- T element;
+  std::list <T> spisok;
+  bool helper;
+  T element;
 
  public:
   bool isEmpty() const {
